@@ -8,17 +8,15 @@ import Movies from "../components/Movies";
 
 const App = props => {
   return (
-    <div>
-      <NavBar />
-      <Router>
-        <div className="">
-          <Route path="/directors" component={Directors} />
-          <Route path="/actors" component={Actors} />
-          <Route path="/movies" component={Movies} />
-          <Route exact path="/" component={Home} />
-        </div>
-      </Router>
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/movies" component={Movies} />
+        <Route exact path="/directors" component={Directors} />
+        <Route exact path="/actors" component={Actors} />
+      </div>
+    </Router>
   );
 };
 
